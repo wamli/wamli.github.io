@@ -1,2 +1,1 @@
-# wamli.github.io
-wasmcloud machine learning inference
+# Wamli [væm.li] - wasmCloud machine learning inference
