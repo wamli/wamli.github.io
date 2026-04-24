@@ -54,7 +54,7 @@ jobs:
           cache: true
       - name: Clean and Download Hugo modules
         # Ensure modules are downloaded into the designated cache directory before building
-        run: hugo mod download
+        run: hugo mod get
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
