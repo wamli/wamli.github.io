@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+  <!-- Outer Circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#2c3e50" stroke-width="3"/>
+
+  <!-- Orange/Red Nodes and Edges -->
+
+  <!-- Top left pyramid -->
+  <circle cx="60" cy="50" r="5" fill="#c85c35"/>
+  <circle cx="75" cy="70" r="5" fill="#c85c35"/>
+  <circle cx="50" cy="75" r="5" fill="#c85c35"/>
+
+  <!-- Top right pyramid -->
+  <circle cx="140" cy="50" r="5" fill="#c85c35"/>
+  <circle cx="125" cy="70" r="5" fill="#c85c35"/>
+  <circle cx="150" cy="75" r="5" fill="#c85c35"/>
+
+  <!-- Center cluster -->
+  <circle cx="100" cy="100" r="5" fill="#c85c35"/>
+  <circle cx="90" cy="110" r="5" fill="#c85c35"/>
+  <circle cx="110" cy="110" r="5" fill="#c85c35"/>
+  <circle cx="85" cy="125" r="5" fill="#c85c35"/>
+  <circle cx="115" cy="125" r="5" fill="#c85c35"/>
+  <circle cx="100" cy="135" r="5" fill="#c85c35"/>
+
+  <!-- Left node -->
+  <circle cx="30" cy="100" r="5" fill="#2c3e50"/>
+
+  <!-- Right node -->
+  <circle cx="170" cy="100" r="5" fill="#2c3e50"/>
+
+  <!-- Top node -->
+  <circle cx="100" cy="30" r="5" fill="#2c3e50"/>
+
+  <!-- Connecting lines (edges) -->
+  <!-- From top left pyramid to center -->
+  <line x1="60" y1="50" x2="100" y2="100" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="75" y1="70" x2="100" y2="100" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="50" y1="75" x2="90" y2="110" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- From top right pyramid to center -->
+  <line x1="140" y1="50" x2="100" y2="100" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="125" y1="70" x2="100" y2="100" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="150" y1="75" x2="110" y2="110" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Center cluster internal connections -->
+  <line x1="100" y1="100" x2="90" y2="110" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="100" y1="100" x2="110" y2="110" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="90" y1="110" x2="85" y2="125" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="110" y1="110" x2="115" y2="125" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="85" y1="125" x2="100" y2="135" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+  <line x1="115" y1="125" x2="100" y2="135" stroke="#c85c35" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Axis lines -->
+  <line x1="100" y1="100" x2="30" y2="100" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="100" y1="100" x2="170" y2="100" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="100" y1="100" x2="100" y2="30" stroke="#2c3e50" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="25" y="108" font-size="14" font-weight="bold" fill="#2c3e50">X</text>
+  <text x="175" y="108" font-size="14" font-weight="bold" fill="#2c3e50">Y</text>
+  <text x="102" y="25" font-size="14" font-weight="bold" fill="#2c3e50">Z</text>
+</svg>

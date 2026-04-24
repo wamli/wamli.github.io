@@ -1,6 +1,10 @@
 ---
-title: "My Site"
-description: "Welcome to my site"
+title: "WAMLI"
+description: "WASM Machine Learning Inference"
 ---
 
-Welcome to your new site built with Hugo and the Congo theme!
+# WAMLI
+
+## WASM Machine Learning Inference
+
+Contributor of the blr-core crate (coming soon)

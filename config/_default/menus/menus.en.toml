@@ -1,17 +1,22 @@
 [[main]]
-  name = "Posts"
-  url = "/posts/"
+  name = "Blog"
+  url = "/blog/"
   weight = 10
+
+[[main]]
+  name = "Search"
+  url = "/search"
+  weight = 15
+
+[[main]]
+  name = "GitHub"
+  url = "https://github.com/wamli"
+  weight = 20
 
 [[main]]
   name = "About"
   url = "/about/"
-  weight = 20
-
-# [[main]]
-#   name = "Github"
-#   url = "https://github.com/wamli"
-#   weight = 30
+  weight = 30
 
 [[footer]]
   name = "Privacy"
