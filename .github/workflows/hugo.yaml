@@ -52,9 +52,9 @@ jobs:
         with:
           go-version: '1.23'
           cache: true
-      - name: Clean and Download Hugo modules
+      - name: Tidy Hugo modules
         # Ensure modules are downloaded into the designated cache directory before building
-        run: hugo mod get
+        run: hugo mod tidy
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -68,7 +68,6 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --configDir config \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
