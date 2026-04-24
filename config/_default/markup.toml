@@ -1,33 +1,19 @@
-defaultMarkdownHandler = "goldmark"
+# -- Markup --
+# These settings are required for the theme to function.
 
 [goldmark]
-  [goldmark.extensions]
-    linkify = false
-  [goldmark.parser]
-    autoHeadingID = true
-    autoHeadingIDType = "github"
-    [goldmark.parser.attribute]
-      block = true
-      title = true
-  [goldmark.renderer]
-    unsafe = true
+[goldmark.renderer]
+  unsafe = true
+[goldmark.extensions]
+[goldmark.extensions.passthrough]
+  enable = true
+[goldmark.extensions.passthrough.delimiters]
+  block = [['\[', '\]'], ['$$', '$$']]
+  inline = [['\(', '\)']]
 
 [highlight]
-  anchorLineNos = false
-  codeFences = true
-  guessSyntax = false
-  hl_Lines = ''
-  hl_inline = false
-  lineAnchors = ''
-  lineNoStart = 1
-  lineNos = false
-  lineNumbersInTable = false
   noClasses = false
-  noHl = false
-  style = 'monokai'
-  tabWidth = 2
 
 [tableOfContents]
-  endLevel = 3
-  ordered = false
   startLevel = 2
+  endLevel = 3

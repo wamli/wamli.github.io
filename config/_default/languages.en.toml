@@ -1,0 +1,18 @@
+languageCode = "en-US"
+languageName = "English"
+languageDirection = "ltr"
+weight = 1
+
+title = "My Site"
+copyright = "&copy; 2024 My Site"
+
+[params]
+  dateFormat = "2 January 2006"
+
+  description = "A clean, elegant Hugo theme for content-focused websites"
+
+  [params.author]
+    name = "Author Name"
+    image = "img/author.jpg"
+    headline = "Welcome"
+    bio = "Your bio here"
