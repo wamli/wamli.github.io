@@ -45,11 +45,16 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Setup Go
+      - name: Setup Go environment
         uses: actions/setup-go@v5
         with:
           go-version: '1.23'
           cache: true
+      - name: Clean and Download Hugo modules
+        run: |
+          hugo mod clean --all
+          hugo mod get -u
+          hugo mod tidy
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
