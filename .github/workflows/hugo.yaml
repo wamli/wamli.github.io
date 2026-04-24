@@ -32,7 +32,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.134.3
+      HUGO_VERSION: 0.160.1
     steps:
       - name: Set Hugo Cache Directory
         run: echo "HUGO_CACHEDIR=${{ runner.temp }}/hugo_cache" >> $GITHUB_ENV
