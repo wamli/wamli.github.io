@@ -1,0 +1,43 @@
+/* Series group card in blog list */
+.series-group {
+  margin-top: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.dark .series-group {
+  border-color: #404040;
+}
+
+.series-group-header {
+  padding: 0.4rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.dark .series-group-header {
+  border-bottom-color: #404040;
+  background-color: #1f2937;
+}
+
+.series-group-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+}
+
+.dark .series-group-label {
+  color: #9ca3af;
+}
+
+.series-group article {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.series-group article:last-child {
+  padding-bottom: 0.75rem;
+}

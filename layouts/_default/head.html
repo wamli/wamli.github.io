@@ -1,0 +1,54 @@
+{{ $colors := site.Data.colors }}
+{{ $appearance := .Site.Params.defaultAppearance }}
+{{ if eq .Site.Params.autoSwitchAppearance true }}
+  {{ $appearance = "auto" }}
+{{ end }}
+{{ $themeColor := .Site.Params.defaultThemeColor }}
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+{{ with .Description }}
+  <meta name="description" content="{{ . }}" />
+{{ end }}
+{{ with .Site.Params.keywords }}
+  <meta name="keywords" content="{{ . }}" />
+{{ end }}
+{{ .Hugo.Generator }}
+{{ if eq hugo.Environment "production" }}
+  <meta name="robots" content="index, follow" />
+{{ else }}
+  <meta name="robots" content="noindex, nofollow" />
+{{ end }}
+<!-- Favicon -->
+<link rel="canonical" href="{{ .Permalink }}" />
+<!-- Theme color -->
+<meta name="theme-color" content="{{ $themeColor }}" />
+<!-- Open graph -->
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ .Description }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ with .Params.image }}
+  <meta property="og:image" content="{{ . | absURL }}" />
+{{ end }}
+{{ if eq .Kind "home" }}
+  <meta name="og:image" content="{{ .Site.BaseURL }}img/logo.svg" />
+{{ end }}
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+{{ with .Params.image }}
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+{{ end }}
+<!-- Styles -->
+{{ $options := dict "targetLanguage" "css" }}
+{{ $styles := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+<!-- Appearance -->
+<script>
+  const appearance = localStorage.getItem('congo_appearance') || '{{ $appearance }}';
+  if (appearance == 'dark' || (appearance == 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  }
+</script>
+{{ partial "head/custom-head.html" . }}

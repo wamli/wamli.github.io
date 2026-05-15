@@ -39,7 +39,7 @@ fingerprintAlgorithm = "sha256"
 [article]
   showDate = true
   showDateUpdated = false
-  showAuthor = false
+  showAuthor = true
   showBreadcrumbs = false
   showDraftLabel = true
   showEdit = false
@@ -49,7 +49,7 @@ fingerprintAlgorithm = "sha256"
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  showTableOfContents = false
+  showTableOfContents = true
   showTaxonomies = false
   showWordCount = false
   showComments = false

@@ -1,0 +1,46 @@
+{{- /*
+Display series navigation for articles that are part of a series.
+Usage: {{< series >}}
+Requires frontmatter: series = "series-slug" and seriesOrder = N
+*/ -}}
+
+{{- $current_series := .Page.Params.series -}}
+{{- $current_order := .Page.Params.seriesOrder -}}
+
+{{- if and $current_series $current_order -}}
+  {{- $all_pages := where (where .Site.Pages "Type" "page") "Params.series" $current_series -}}
+  {{- $sorted := slice -}}
+  {{- range sort $all_pages "Params.seriesOrder" -}}
+    {{- $sorted = $sorted | append . -}}
+  {{- end -}}
+
+  {{- if gt (len $sorted) 1 -}}
+    <div class="series-nav" style="background: #f5f5f5; border-left: 4px solid #0066cc; padding: 1rem; margin: 2rem 0; border-radius: 4px;">
+      <div style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; font-weight: 600;">
+        📚 <strong>Series:</strong> {{ $current_series | humanize }}
+      </div>
+
+      <div style="margin-top: 1rem;">
+        {{- range $page := $sorted -}}
+          <div style="margin-bottom: 0.5rem; padding-left: 1.5rem;">
+            {{- if eq $page.RelPermalink $.Page.RelPermalink -}}
+              <span style="color: #0066cc; font-weight: 600;">
+                ▶ Part {{ $page.Params.seriesOrder }}: {{ $page.Title }}
+              </span>
+            {{- else -}}
+              <a href="{{ $page.RelPermalink }}" style="color: #0066cc; text-decoration: none;">
+                Part {{ $page.Params.seriesOrder }}: {{ $page.Title }}
+              </a>
+            {{- end -}}
+          </div>
+        {{- end -}}
+      </div>
+
+      {{- if .Page.Params.seriesIntro }}
+        <div style="margin-top: 1rem; font-size: 0.95rem; color: #555;">
+          {{ .Page.Params.seriesIntro }}
+        </div>
+      {{- end -}}
+    </div>
+  {{- end -}}
+{{- end -}}

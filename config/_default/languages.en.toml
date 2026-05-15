@@ -3,8 +3,8 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 1
 
-title = "My Site"
-copyright = "&copy; 2024 My Site"
+title = "Home"
+copyright = "&copy; 2024 Wamli"
 
 [params]
   dateFormat = "2 January 2006"
@@ -12,7 +12,7 @@ copyright = "&copy; 2024 My Site"
   description = "A clean, elegant Hugo theme for content-focused websites"
 
   [params.author]
-    name = "Author Name"
+    name = "Christoph Brewing"
     image = "img/author.jpg"
     headline = "Welcome"
     bio = "Your bio here"
